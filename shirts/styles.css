@@ -215,3 +215,22 @@ body {
   filter: brightness(1.03);
   outline: none;
 }
+
+.product-details {
+  background: #e6e6e6;
+  color: #111;
+  padding: 1.6rem;
+  width: 100%;
+  max-width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.product-details p {
+  margin: 0;
+  font-family: var(--button-font);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.2;
+}
