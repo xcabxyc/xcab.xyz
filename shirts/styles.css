@@ -133,3 +133,81 @@ body {
 .page {
   flex-wrap: wrap;
 }
+.product-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 3.5rem;
+  margin-left: 2rem;
+}
+
+.product-image {
+  display: block;
+  width: 320px;
+  max-width: 80vw;
+  height: auto;
+}
+
+.product-card {
+  background: #f3f3f3;
+  color: #111;
+  border: 2px dashed #8a8a8a;
+  padding: 1.4rem 1.6rem 1.2rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  min-width: 380px;
+  max-width: 90vw;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.product-title {
+  margin: 0;
+  font-family: var(--button-font);
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-weight: normal;
+  line-height: 0.95;
+  color: #111;
+}
+
+.product-price {
+  margin: 0;
+  font-family: var(--button-font);
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  line-height: 1;
+  color: #111;
+}
+
+.product-buy {
+  display: flex;
+  align-items: flex-end;
+}
+
+.payhip-buy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #7dc95e;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.95em 1.35em;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.payhip-buy-button:hover,
+.payhip-buy-button:focus-visible {
+  filter: brightness(1.03);
+  outline: none;
+}
