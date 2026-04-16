@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "Type right!";
+  src: url("fonts/TypeRight.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SimSun";
+  src: url("fonts/SimSun.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --bg: #000000;
   --text: #f5f5f5;
