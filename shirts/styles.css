@@ -137,9 +137,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 2rem;
-  margin-top: 3.5rem;
-  margin-left: 2rem;
+  gap: 1.5rem;
+
+  /* move it DOWN slightly */
+  margin-top: 5rem;
+
+  /* reduce left offset */
+  margin-left: 0.5rem;
 }
 
 .product-image {
