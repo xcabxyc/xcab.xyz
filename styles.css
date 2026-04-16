@@ -1,13 +1,6 @@
 @font-face {
-  font-family: "Type right!";
+  font-family: "Typeright";
   src: url("fonts/TypeRight.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "SimSun";
-  src: url("fonts/SimSun.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -18,8 +11,8 @@
   --green: #18ff00;
   --green-hover: #31ff1b;
   --shadow: rgba(0, 0, 0, 0.25);
-  --title-font: "Type right!", "American Typewriter", "Courier New", monospace;
-  --button-font: "Type right!", "American Typewriter", "Courier New", monospace;
+  --title-font: "Typeright", "American Typewriter", "Courier New", monospace;
+  --button-font: "Typeright", "American Typewriter", "Courier New", monospace;
 }
 
 * {
