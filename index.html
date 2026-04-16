@@ -1,1 +1,131 @@
-Hello world!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>xcabxyc</title>
+  <style>
+    :root {
+      --bg: #000000;
+      --text: #f5f5f5;
+      --green: #18ff00;
+      --green-hover: #31ff1b;
+      --shadow: rgba(0, 0, 0, 0.25);
+      --title-font: "SimSun", "NSimSun", "Songti SC", serif;
+      --button-font: "Type right!", "American Typewriter", "Courier New", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: var(--title-font);
+    }
+
+    .page {
+      min-height: 100vh;
+      width: 100%;
+      padding: 4.2vw 4.6vw;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 2rem;
+      background: #000;
+    }
+
+    .site-title {
+      margin: 0;
+      font-family: var(--title-font);
+      font-weight: 400;
+      font-size: clamp(2.4rem, 4.2vw, 4.4rem);
+      line-height: 1;
+      letter-spacing: 0;
+      color: #f3f3f3;
+      white-space: nowrap;
+      padding-top: 0.1em;
+    }
+
+    .button-row {
+      display: flex;
+      align-items: flex-start;
+      gap: clamp(0.75rem, 2vw, 2rem);
+      padding-top: 0.3vw;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-button {
+      appearance: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 0;
+      border: none;
+      background: var(--green);
+      color: #111;
+      text-decoration: none;
+      font-family: var(--button-font);
+      font-size: clamp(1.85rem, 3.2vw, 3.5rem);
+      line-height: 1;
+      padding: 0.22em 0.35em 0.18em;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 1px 0 var(--shadow);
+      transition: transform 120ms ease, background-color 120ms ease;
+      white-space: nowrap;
+    }
+
+    .nav-button:hover,
+    .nav-button:focus-visible {
+      background: var(--green-hover);
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .nav-button:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        padding: 1.5rem 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1.5rem;
+      }
+
+      .site-title {
+        font-size: clamp(2.3rem, 11vw, 3.3rem);
+      }
+
+      .button-row {
+        justify-content: flex-start;
+        gap: 0.75rem;
+      }
+
+      .nav-button {
+        font-size: clamp(1.8rem, 8.2vw, 2.6rem);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <h1 class="site-title">xcabxyc</h1>
+
+    <nav class="button-row" aria-label="Main links">
+      <a class="nav-button" href="https://example.com/shirts" target="_blank" rel="noopener noreferrer">shirts</a>
+      <a class="nav-button" href="https://xcabxyc.bandcamp.com" target="_blank" rel="noopener noreferrer">bandcamp</a>
+    </nav>
+  </main>
+</body>
+</html>
