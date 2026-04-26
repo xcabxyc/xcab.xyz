@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>coming soon</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .collage {
+      position: relative;
+      width: min(85vw, 720px);
+      height: min(75vh, 560px);
+    }
+
+    .collage img {
+      position: absolute;
+      display: block;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .gif-1 {
+      width: 42%;
+      left: 6%;
+      top: 12%;
+      transform: rotate(-6deg);
+      z-index: 2;
+    }
+
+    .gif-2 {
+      width: 38%;
+      right: 7%;
+      top: 6%;
+      transform: rotate(5deg);
+      z-index: 3;
+    }
+
+    .gif-3 {
+      width: 46%;
+      left: 28%;
+      top: 30%;
+      transform: rotate(-1deg);
+      z-index: 5;
+    }
+
+    .gif-4 {
+      width: 36%;
+      left: 4%;
+      bottom: 8%;
+      transform: rotate(4deg);
+      z-index: 4;
+    }
+
+    .gif-5 {
+      width: 40%;
+      right: 5%;
+      bottom: 10%;
+      transform: rotate(-5deg);
+      z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+      .collage {
+        width: 92vw;
+        height: 70vh;
+      }
+
+      .collage img {
+        border-radius: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="collage" >
+    <img class="gif-1" src="https://www.xcab.xyz/gifs/1.gif" alt="GIF 1" />
+    <img class="gif-2" src="https://www.xcab.xyz/gifs/2.gif" alt="GIF 2" />
+    <img class="gif-3" src="https://www.xcab.xyz/gifs/3.gif" alt="GIF 3" />
+    <img class="gif-4" src="https://www.xcab.xyz/gifs/4.gif" alt="GIF 4" />
+    <img class="gif-5" src="https://www.xcab.xyz/gifs/5.gif" alt="GIF 5" />
+  </main>
+</body>
+</html>
