@@ -134,13 +134,20 @@ body {
   flex-wrap: wrap;
 }
 
-.product-area {
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 3.5rem;
+  margin-top: 4.5rem;
+  margin-left: 0.5rem;
+}
+
+.product-block {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5rem;
-  margin-top: 4.5rem;
-  margin-left: 0.5rem;
 }
 
 .product-image {
@@ -275,4 +282,22 @@ body {
 .payhip-buy-button.disabled {
   opacity: 0.45;
   cursor: not-allowed;
+}
+
+
+@media (max-width: 700px) {
+  .products-grid {
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-left: 0;
+  }
+
+  .product-card,
+  .product-details {
+    max-width: 90vw;
+  }
+
+  .product-buy {
+    flex-wrap: wrap;
+  }
 }
