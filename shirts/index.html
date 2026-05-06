@@ -1,91 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>xcabxyc</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-  <script>
-  const sizeSelect = document.getElementById("sizeSelect");
-  const buyButton = document.getElementById("buyButton");
-
-  sizeSelect.addEventListener("change", function () {
-    if (this.value) {
-      buyButton.classList.remove("disabled");
-    } else {
-      buyButton.classList.add("disabled");
-    }
-  });
-
-  buyButton.addEventListener("click", function () {
-    if (sizeSelect.value) {
-      window.location.href = sizeSelect.value;
-    }
-  });
-</script>
 <body>
   <main class="page">
-  <div class="left-column">
-    <h1 class="site-title">xcabxyc</h1>
+    <div class="left-column">
+      <h1 class="site-title">xcabxyc</h1>
 
-    <div class="product-area">
-      <img
-        src="https://www.xcab.xyz/images/grint-tee.png"
-        alt="The Grin Tee black shirt"
-        class="product-image"
-      />
+      <div class="product-area">
+        <img
+          src="https://www.xcab.xyz/images/grint-tee.png"
+          alt="The Grin Tee black shirt"
+          class="product-image"
+        />
 
-      <div class="product-card">
-        <div class="product-info">
-          <h2 class="product-title">the grin tee</h2>
-          <p class="product-price">£20</p>
+        <div class="product-card">
+          <div class="product-info">
+            <h2 class="product-title">the grin tee</h2>
+            <p class="product-price">£20</p>
+          </div>
+
+          <div class="product-buy">
+            <select class="size-select" id="sizeSelect">
+              <option value="">choose size</option>
+
+              <option value="https://payhip.com/buy?link%5B%5D=pwrmA&parent_url=https%3A%2F%2Fwww.xcab.xyz%2Fshirts%2F&type=fallback_direct&s=1&cart_links%5B%5D=pwrmA&qty%5BpwrmA%5D=1&variant_combination%5BpwrmA%5D=1778095199142">
+                extra small
+              </option>
+
+              <option value="https://payhip.com/buy?s=1&qty%5BpwrmA%5D=1&variant_combination%5BpwrmA%5D=1778095193086&cart_links%5B%5D=pwrmA">
+                small
+              </option>
+
+              <option value="https://payhip.com/buy?s=1&qty%5BpwrmA%5D=1&variant_combination%5BpwrmA%5D=1778095194398&cart_links%5B%5D=pwrmA">
+                medium
+              </option>
+
+              <option value="https://payhip.com/buy?s=1&qty%5BpwrmA%5D=1&variant_combination%5BpwrmA%5D=1778095203654&cart_links%5B%5D=pwrmA">
+                large
+              </option>
+
+              <option value="https://payhip.com/buy?s=1&qty%5BpwrmA%5D=1&variant_combination%5BpwrmA%5D=1778095207142&cart_links%5B%5D=pwrmA">
+                extra large
+              </option>
+            </select>
+
+            <button type="button" class="payhip-buy-button disabled" id="buyButton">
+              give me this, now!
+            </button>
+          </div>
         </div>
 
-        <div class="product-buy">
-  <select class="size-select" id="sizeSelect">
-    <option value="">choose size</option>
-
-    <option value="https://payhip.com/buy?link%5B%5D=pwrmA&parent_url=https%3A%2F%2Fwww.xcab.xyz%2Fshirts%2F&type=fallback_direct&s=1&cart_links%5B%5D=pwrmA&qty%5BpwrmA%5D=1&variant_combination%5BpwrmA%5D=1778095199142">
-      extra small
-    </option>
-
-    <option value="https://payhip.com/buy?s=1&qty%5BpwrmA%5D=1&variant_combination%5BpwrmA%5D=1778095193086&cart_links%5B%5D=pwrmA">
-      small
-    </option>
-
-    <option value="https://payhip.com/buy?s=1&qty%5BpwrmA%5D=1&variant_combination%5BpwrmA%5D=1778095194398&cart_links%5B%5D=pwrmA">
-      medium
-    </option>
-
-    <option value="https://payhip.com/buy?s=1&qty%5BpwrmA%5D=1&variant_combination%5BpwrmA%5D=1778095203654&cart_links%5B%5D=pwrmA">
-      large
-    </option>
-
-    <option value="https://payhip.com/buy?s=1&qty%5BpwrmA%5D=1&variant_combination%5BpwrmA%5D=1778095207142&cart_links%5B%5D=pwrmA">
-      extra large
-    </option>
-  </select>
-
-  <button class="payhip-buy-button disabled" id="buyButton">
-    give me this, now!
-  </button>
-</div>
-
-      <div class="product-details">
-        <p>printed on AWDis 150 t-shirt</p>
-        <p>100% cotton</p>
-        <p>150gsm</p>
-        <p>relaxed fit</p>
-        <p>wash at 30c</p>
+        <div class="product-details">
+          <p>printed on AWDis 150 t-shirt</p>
+          <p>100% cotton</p>
+          <p>150gsm</p>
+          <p>relaxed fit</p>
+          <p>wash at 30c</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <nav class="button-row" aria-label="Main links">
-    <a class="nav-button" href="https://xcab.xyz">go back</a>
-  </nav>
-</main>
-<script type="text/javascript" src="https://payhip.com/payhip.js"></script>
+    <nav class="button-row" aria-label="Main links">
+      <a class="nav-button" href="https://xcab.xyz">go back</a>
+    </nav>
+  </main>
+
+  <script>
+    const sizeSelect = document.getElementById("sizeSelect");
+    const buyButton = document.getElementById("buyButton");
+
+    sizeSelect.addEventListener("change", function () {
+      buyButton.classList.toggle("disabled", !this.value);
+    });
+
+    buyButton.addEventListener("click", function () {
+      if (sizeSelect.value) {
+        window.location.href = sizeSelect.value;
+      }
+    });
+  </script>
 </body>
 </html>
