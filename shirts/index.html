@@ -6,6 +6,24 @@
   <title>xcabxyc</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+  <script>
+  const sizeSelect = document.getElementById("sizeSelect");
+  const buyButton = document.getElementById("buyButton");
+
+  sizeSelect.addEventListener("change", function () {
+    if (this.value) {
+      buyButton.classList.remove("disabled");
+    } else {
+      buyButton.classList.add("disabled");
+    }
+  });
+
+  buyButton.addEventListener("click", function () {
+    if (sizeSelect.value) {
+      window.location.href = sizeSelect.value;
+    }
+  });
+</script>
 <body>
   <main class="page">
   <div class="left-column">
@@ -25,16 +43,34 @@
         </div>
 
         <div class="product-buy">
-          <a
-            href="https://payhip.com/b/pwrmA"
-            class="payhip-buy-button"
-            data-theme="green"
-            data-product="pwrmA"
-          >
-            give me this, now!
-          </a>
-        </div>
-      </div>
+  <select class="size-select" id="sizeSelect">
+    <option value="">choose size</option>
+
+    <option value="https://payhip.com/buy?link%5B%5D=pwrmA&parent_url=https%3A%2F%2Fwww.xcab.xyz%2Fshirts%2F&type=fallback_direct&s=1&cart_links%5B%5D=pwrmA&qty%5BpwrmA%5D=1&variant_combination%5BpwrmA%5D=1778095199142">
+      extra small
+    </option>
+
+    <option value="https://payhip.com/buy?s=1&qty%5BpwrmA%5D=1&variant_combination%5BpwrmA%5D=1778095193086&cart_links%5B%5D=pwrmA">
+      small
+    </option>
+
+    <option value="https://payhip.com/buy?s=1&qty%5BpwrmA%5D=1&variant_combination%5BpwrmA%5D=1778095194398&cart_links%5B%5D=pwrmA">
+      medium
+    </option>
+
+    <option value="https://payhip.com/buy?s=1&qty%5BpwrmA%5D=1&variant_combination%5BpwrmA%5D=1778095203654&cart_links%5B%5D=pwrmA">
+      large
+    </option>
+
+    <option value="https://payhip.com/buy?s=1&qty%5BpwrmA%5D=1&variant_combination%5BpwrmA%5D=1778095207142&cart_links%5B%5D=pwrmA">
+      extra large
+    </option>
+  </select>
+
+  <button class="payhip-buy-button disabled" id="buyButton">
+    give me this, now!
+  </button>
+</div>
 
       <div class="product-details">
         <p>printed on AWDis 150 t-shirt</p>
