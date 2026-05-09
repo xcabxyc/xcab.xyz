@@ -302,3 +302,23 @@ body {
     flex-wrap: wrap;
   }
 }
+
+.faq-footer {
+  width: 100%;
+  padding: 2rem 1rem 1.5rem;
+  text-align: center;
+  background: #000;
+}
+
+.faq-footer a {
+  color: #f3f3f3;
+  font-family: var(--button-font);
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  text-decoration: none;
+}
+
+.faq-footer a:hover,
+.faq-footer a:focus-visible {
+  color: var(--green);
+  outline: none;
+}
