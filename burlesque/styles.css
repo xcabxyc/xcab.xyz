@@ -4,9 +4,10 @@
 
 @font-face {
     font-family: "FuturaClassic";
-    src: url("http://xcab.xyz/fonts/Futura%20Classic%20W01%20Light.ttf") format("truetype");
+    src: url("./fonts/Futura%20Classic%20W01%20Light.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
+
 }
 
 /* ==========================
