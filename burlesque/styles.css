@@ -80,3 +80,24 @@ h1 {
 .links a:hover {
     opacity: 0.6;
 }
+/* ==========================
+   BACK BUTTON
+   ========================== */
+
+.back-button {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+
+    transition: opacity 0.2s ease;
+}
+
+.back-button:hover {
+    opacity: 0.6;
+}
