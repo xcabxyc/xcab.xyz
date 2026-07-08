@@ -1,0 +1,81 @@
+/* ==========================
+   FONT
+   ========================== */
+
+@font-face {
+    font-family: "FuturaClassic";
+    src: url("http://xcab.xyz/fonts/Futura%20Classic%20W01%20Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ==========================
+   RESET
+   ========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================
+   PAGE
+   ========================== */
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: "FuturaClassic", sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================
+   CONTENT
+   ========================== */
+
+.container {
+    width: 90%;
+    max-width: 500px;
+}
+
+.cover {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 28px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-bottom: 22px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s ease;
+}
+
+.links a:hover {
+    opacity: 0.6;
+}
