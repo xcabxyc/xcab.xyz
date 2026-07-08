@@ -1,248 +1,117 @@
-/* ==========================================
-    BURLESQUE
-    2001 PROMO
-========================================== */
+const canvas = document.getElementById("fx");
+const ctx = canvas.getContext("2d");
 
-const body = document.body;
-
-const cursor = document.querySelector(".cursor-glow");
-const hero = document.querySelector(".hero");
-const cover = document.querySelector(".cover");
-const cd = document.querySelector(".cd");
-const stars = document.querySelector(".stars");
-const eqBars = document.querySelectorAll(".eq span");
-
-/*==========================================
-CURSOR
-==========================================*/
-
-document.addEventListener("mousemove",(e)=>{
-
-    cursor.style.left=e.clientX+"px";
-    cursor.style.top=e.clientY+"px";
-
-});
-
-/*==========================================
-PARALLAX
-==========================================*/
-
-document.addEventListener("mousemove",(e)=>{
-
-    const x=(e.clientX/window.innerWidth)-0.5;
-    const y=(e.clientY/window.innerHeight)-0.5;
-
-    hero.style.transform=
-    `translate(${x*20}px,${y*20}px)`;
-
-    stars.style.transform=
-    `translate(${x*-40}px,${y*-40}px)`;
-
-});
-
-/*==========================================
-SPARKLES
-==========================================*/
-
-function sparkle(){
-
-    const star=document.createElement("div");
-
-    star.className="spark";
-
-    star.style.left=Math.random()*window.innerWidth+"px";
-    star.style.top=Math.random()*window.innerHeight+"px";
-
-    star.style.animationDuration=
-    2+Math.random()*4+"s";
-
-    document.body.appendChild(star);
-
-    setTimeout(()=>{
-
-        star.remove();
-
-    },5000);
-
+function resize() {
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
 }
+addEventListener("resize", resize);
+resize();
 
-setInterval(sparkle,120);
+ctx.imageSmoothingEnabled = false;
 
-/*==========================================
-SHOOTING STARS
-==========================================*/
+const particles = [];
+let clicks = 0;
 
-function shootingStar(){
+/* ==========================
+   PARTICLE
+========================== */
 
-    const s=document.createElement("div");
+class Particle {
 
-    s.className="shooting-star";
+    constructor(x, y, vx, vy, life, size = 2) {
 
-    s.style.left=Math.random()*window.innerWidth+"px";
-    s.style.top=Math.random()*250+"px";
+        this.x = x;
+        this.y = y;
 
-    document.body.appendChild(s);
+        this.vx = vx;
+        this.vy = vy;
 
-    setTimeout(()=>{
+        this.life = life;
+        this.maxLife = life;
 
-        s.remove();
+        this.size = size;
 
-    },2200);
-
-}
-
-setInterval(shootingStar,7000);
-
-/*==========================================
-FLOATING PARTICLES
-==========================================*/
-
-for(let i=0;i<80;i++){
-
-    const p=document.createElement("div");
-
-    p.className="particle";
-
-    p.style.left=Math.random()*100+"vw";
-    p.style.top=Math.random()*100+"vh";
-
-    p.style.animationDelay=Math.random()*12+"s";
-
-    p.style.animationDuration=
-    8+Math.random()*14+"s";
-
-    p.style.opacity=Math.random();
-
-    document.body.appendChild(p);
-
-}
-
-/*==========================================
-RANDOM EQUALIZER
-==========================================*/
-
-setInterval(()=>{
-
-    eqBars.forEach(bar=>{
-
-        bar.style.height=
-        10+Math.random()*60+"px";
-
-    });
-
-},120);
-
-/*==========================================
-ALBUM DRIFT
-==========================================*/
-
-let t=0;
-
-function animate(){
-
-    t+=0.01;
-
-    cover.style.transform=
-
-    `translateY(${Math.sin(t)*10}px)
-     rotate(${Math.sin(t*.4)*1.2}deg)`;
-
-    cd.style.transform=
-
-    `rotate(${t*40}deg)
-     translateX(${Math.sin(t)*8}px)`;
-
-    requestAnimationFrame(animate);
-
-}
-
-animate();
-
-/*==========================================
-CRT FLICKER
-==========================================*/
-
-setInterval(()=>{
-
-    body.style.filter=
-    `brightness(${0.95+Math.random()*0.08})`;
-
-},120);
-
-/*==========================================
-TWINKLE
-==========================================*/
-
-setInterval(()=>{
-
-    document.querySelectorAll(".spark").forEach(s=>{
-
-        s.style.opacity=Math.random();
-
-    });
-
-},300);
-
-/*==========================================
-CLICK BURST
-==========================================*/
-
-document.addEventListener("click",(e)=>{
-
-    for(let i=0;i<18;i++){
-
-        const b=document.createElement("div");
-
-        b.className="burst";
-
-        b.style.left=e.clientX+"px";
-        b.style.top=e.clientY+"px";
-
-        b.style.setProperty("--dx",
-            (Math.random()*220-110)+"px");
-
-        b.style.setProperty("--dy",
-            (Math.random()*220-110)+"px");
-
-        document.body.appendChild(b);
-
-        setTimeout(()=>{
-
-            b.remove();
-
-        },1000);
+        this.twinkle = Math.random() * Math.PI * 2;
 
     }
 
-});
+    update() {
 
-/*==========================================
-LOGO HUE SHIFT
-==========================================*/
+        this.x += this.vx;
+        this.y += this.vy;
 
-const logo=document.querySelector(".logo");
+        // gravity
+        this.vy += 0.045;
 
-let hue=0;
+        // tiny drag
+        this.vx *= 0.995;
+        this.vy *= 0.995;
 
-setInterval(()=>{
+        this.life--;
 
-    hue+=0.5;
+    }
 
-    logo.style.filter=
-    `hue-rotate(${hue}deg)`;
+    draw() {
 
-},40);
+        const alpha = this.life / this.maxLife;
 
-/*==========================================
-WELCOME
-==========================================*/
+        ctx.globalAlpha = alpha;
 
-console.log(`
-************************************
+        ctx.fillStyle = "#fff";
 
- BURLESQUE
+        const s = this.size;
 
- 2001 PROMO EXPERIENCE
+        // little pixel star instead of square
 
-************************************
-`);
+        ctx.fillRect(this.x, this.y, s, s);
+
+        if (Math.sin(this.twinkle + performance.now() * 0.02) > 0) {
+
+            ctx.fillRect(this.x - s, this.y, s, s);
+            ctx.fillRect(this.x + s, this.y, s, s);
+            ctx.fillRect(this.x, this.y - s, s, s);
+            ctx.fillRect(this.x, this.y + s, s, s);
+
+        }
+
+        ctx.globalAlpha = 1;
+
+    }
+
+}
+
+/* ==========================
+   PERFECT BURST
+========================== */
+
+function burst(x, y, count = 80, power = 6) {
+
+    for (let i = 0; i < count; i++) {
+
+        const angle = (Math.PI * 2 / count) * i;
+
+        const speed = power * (0.6 + Math.random() * 0.4);
+
+        particles.push(
+
+            new Particle(
+
+                x,
+                y,
+
+                Math.cos(angle) * speed,
+
+                Math.sin(angle) * speed,
+
+                70 + Math.random() * 25,
+
+                2
+
+            )
+
+        );
+
+    }
+
+}
