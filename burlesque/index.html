@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BURLESQUE</title>
+
+<style>
+/* ==========================
+   FONT
+   ========================== */
+@font-face {
+    font-family: "FuturaClassic";
+    src: url("http://xcab.xyz/fonts/Futura%20Classic%20W01%20Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ==========================
+   PAGE
+   ========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    font-family:"FuturaClassic", sans-serif;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+/* ==========================
+   CONTENT
+   ========================== */
+
+.container{
+    width:90%;
+    max-width:500px;
+}
+
+.cover{
+    width:100%;
+    height:auto;
+    display:block;
+    margin-bottom:35px;
+}
+
+h1{
+    font-size:2rem;
+    letter-spacing:6px;
+    font-weight:normal;
+    margin-bottom:30px;
+}
+
+.links{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.links a{
+    color:#fff;
+    text-decoration:none;
+    font-size:1rem;
+    transition:opacity .2s ease;
+}
+
+.links a:hover{
+    opacity:.6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <img
+        class="cover"
+        src="https://f4.bcbits.com/img/a3901884162_10.jpg"
+        alt="BURLESQUE Album Cover">
+
+    <h1>BURLESQUE</h1>
+
+    <div class="links">
+
+        <a href="https://dayexso.bandcamp.com/album/burlesque" target="_blank">
+            BANDCAMP
+        </a>
+
+        <!--
+        ADD MORE LINKS HERE
+
+        Example:
+
+        <a href="https://spotify.com" target="_blank">
+            SPOTIFY
+        </a>
+
+        <a href="https://youtube.com" target="_blank">
+            YOUTUBE
+        </a>
+
+        -->
+
+    </div>
+
+</div>
+
+</body>
+</html>
