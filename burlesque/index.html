@@ -1,138 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>BURLESQUE</title>
 
-<style>
-/* ==========================
-   FONT
-   ========================== */
-@font-face {
-    font-family: "FuturaClassic";
-    src: url("http://xcab.xyz/fonts/Futura%20Classic%20W01%20Light.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-/* ==========================
-   PAGE
-   ========================== */
+<link rel="stylesheet" href="styles.css">
 
-   <a class="back-button" href="https://xcab.xyz/">
-    ← BACK
-</a>
-   
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    background:#000;
-    color:#fff;
-    font-family:"FuturaClassic", sans-serif;
-    min-height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-}
-
-/* ==========================
-   CONTENT
-   ========================== */
-
-.container{
-    width:90%;
-    max-width:500px;
-}
-
-.cover{
-    width:100%;
-    height:auto;
-    display:block;
-    margin-bottom:35px;
-}
-
-h1{
-    font-size:2rem;
-    letter-spacing:6px;
-    font-weight:normal;
-    margin-bottom:30px;
-}
-
-.links{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-}
-
-.links a{
-    color:#fff;
-    text-decoration:none;
-    font-size:1rem;
-    transition:opacity .2s ease;
-}
-
-.links a:hover{
-    opacity:.6;
-}
-</style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="noise"></div>
+<div class="scanlines"></div>
+<div class="vignette"></div>
+<div class="stars"></div>
+<div class="particles"></div>
 
-    <img
-        class="cover"
-        src="https://f4.bcbits.com/img/a3901884162_10.jpg"
-        alt="BURLESQUE Album Cover">
+<div class="cursor-glow"></div>
 
-    <h1>BURLESQUE</h1>
+<header>
 
-    <div class="links">
+<div class="logo-wrap">
 
-        <a href="https://dayexso.bandcamp.com/album/burlesque" target="_blank">
-            BANDCAMP
-        </a>
+<div class="logo-glow"></div>
 
-       
-        <a href="https://www.youtube.com/watch?v=YVzSTr_JlbI" target="_blank">
-            YOUTUBE
-        </a>
-        <!--
-        ADD MORE LINKS HERE
+<h1 class="logo">
 
-        Example:
+BURLESQUE
 
-        <a href="https://spotify.com" target="_blank">
-            SPOTIFY
-        </a>
+</h1>
 
-        <a href="https://youtube.com" target="_blank">
-            YOUTUBE
-        </a>
+<p class="subtitle">
 
-        -->
+dream • chrome • decay • 2001
 
-    </div>
-<body>
-  <main class="collage" >
+</p>
 
-    <img class="gif-2" src="https://www.xcab.xyz/gifs/2.gif" alt="GIF 2" />
-    <img class="gif-3" src="https://www.xcab.xyz/gifs/3.gif" alt="GIF 3" />
-    <img class="gif-4" src="https://www.xcab.xyz/gifs/4.gif" alt="GIF 4" />
-    <img class="gif-5" src="https://www.xcab.xyz/gifs/5.gif" alt="GIF 5" />
-  </main>
-</body>
 </div>
 
+</header>
+
+<main>
+
+<section class="hero">
+
+<div class="halo"></div>
+
+<div class="cd"></div>
+
+<img
+class="cover"
+src="https://f4.bcbits.com/img/a3901884162_10.jpg"
+alt="Burlesque">
+
+<div class="sparkles"></div>
+
+</section>
+
+<section class="player">
+
+<div class="player-header">
+
+NOW PLAYING
+
+</div>
+
+<div class="eq">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+<div class="buttons">
+
+<a href="https://dayexso.bandcamp.com/album/burlesque" target="_blank">
+
+BANDCAMP
+
+</a>
+
+<a href="https://www.youtube.com/watch?v=YVzSTr_JlbI" target="_blank">
+
+YOUTUBE
+
+</a>
+
+<a href="#">
+
+DOWNLOAD
+
+</a>
+
+<a href="#">
+
+GALLERY
+
+</a>
+
+</div>
+
+</section>
+
+<section class="floating">
+
+<img src="https://www.xcab.xyz/gifs/2.gif" class="gif g1">
+
+<img src="https://www.xcab.xyz/gifs/3.gif" class="gif g2">
+
+<img src="https://www.xcab.xyz/gifs/4.gif" class="gif g3">
+
+<img src="https://www.xcab.xyz/gifs/5.gif" class="gif g4">
+
+</section>
+
+<footer>
+
+<div class="marquee">
+
+<div>
+
+★ BEST VIEWED IN INTERNET EXPLORER 6 ★
+1024×768 ★
+BURLESQUE PROMO SITE ★
+VISITOR #00023891 ★
+
+</div>
+
+</div>
+
+<div class="badges">
+
+<img src="https://cyber.dabamos.de/88x31/linuxnow.gif">
+
+<img src="https://cyber.dabamos.de/88x31/getacro.gif">
+
+<img src="https://cyber.dabamos.de/88x31/ie_logo.gif">
+
+</div>
+
+<p>
+
+© BURLESQUE
+
+</p>
+
+</footer>
+
+</main>
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
