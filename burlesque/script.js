@@ -126,29 +126,22 @@ function firework(x, y) {
 
 document.addEventListener("click", e => {
 
-    // Ignore clicks on the album cover
-    if (e.target.id === "cover") return;
+    // Only trigger when clicking the actual page background
+    if (
+        e.target !== document.body &&
+        e.target !== canvas
+    ) return;
 
     clicks++;
 
     if (clicks >= 10) {
 
         clicks = 0;
-
-        firework(
-            e.clientX,
-            e.clientY
-        );
+        firework(e.clientX, e.clientY);
 
     } else {
 
-        // Bigger star burst
-        burst(
-            e.clientX,
-            e.clientY,
-            60,
-            5
-        );
+        burst(e.clientX, e.clientY, 80, 6);
 
     }
 
