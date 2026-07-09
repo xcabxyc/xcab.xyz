@@ -41,3 +41,87 @@ body{
         transform:translateY(-6px);
     }
 }
+/*=========================
+PIXEL FONT
+=========================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+/*=========================
+LINKS
+=========================*/
+
+#links{
+
+    position:fixed;
+
+    bottom:40px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+    gap:28px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    z-index:10;
+
+}
+
+#links a{
+
+    font-family:"Press Start 2P", monospace;
+
+    font-size:11px;
+
+    color:#ff3b3b;
+
+    text-decoration:none;
+
+    letter-spacing:1px;
+
+    text-shadow:
+
+        0 0 2px #000,
+        0 0 6px rgba(255,0,0,.7);
+
+    transition:
+        transform .12s,
+        color .12s;
+
+}
+
+#links a:hover{
+
+    color:#ffffff;
+
+    transform:translateY(-2px);
+
+}
+
+#links a:active{
+
+    transform:translateY(0);
+
+}
+
+@media (max-width:700px){
+
+    #links{
+
+        gap:18px;
+        bottom:24px;
+        width:90%;
+
+    }
+
+    #links a{
+
+        font-size:9px;
+
+    }
+
+}
