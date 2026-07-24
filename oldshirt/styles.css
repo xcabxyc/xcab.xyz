@@ -159,9 +159,9 @@ body {
 }
 
 .product-card {
-  background: #dcdcdc;
-  color: #111;
-  border: 2px dashed #8a8a8a;
+  background: #0a0a0a;
+  color: var(--text);
+  border: 2px dashed var(--green);
   padding: 1.4rem 1.2rem 1.2rem;
   display: flex;
   align-items: flex-end;
@@ -183,7 +183,7 @@ body {
   font-size: clamp(1.8rem, 3vw, 2.7rem);
   font-weight: normal;
   line-height: 0.95;
-  color: #111;
+  color: var(--text);
 }
 
 .product-price {
@@ -191,7 +191,7 @@ body {
   font-family: var(--button-font);
   font-size: clamp(1.8rem, 2.8vw, 2.4rem);
   line-height: 1;
-  color: #111;
+  color: var(--green);
 }
 
 .product-buy {
