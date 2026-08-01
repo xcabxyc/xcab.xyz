@@ -103,7 +103,7 @@
           <div class="product-image-row">
             <img
               src="https://www.xcab.xyz/images/thousandshirt.png"
-              data-front-src="https://www.xcab.xyz/images/eliasun.png"
+              data-front-src="https://www.xcab.xyz/images/thousandshirt.png"
               data-back-src="https://www.xcab.xyz/images/eliasun.png"
               alt=""
               class="product-image"
@@ -172,19 +172,40 @@
     document.querySelectorAll(".product-image-row").forEach(function (imageRow) {
       const productImage = imageRow.querySelector(".product-image");
       const nextButton = imageRow.querySelector(".image-next-button");
+      const frontSrc = productImage.dataset.frontSrc || productImage.src;
+      const backSrc = productImage.dataset.backSrc;
+
+      if (!backSrc) {
+        if (nextButton) {
+          nextButton.remove();
+        }
+        return;
+      }
+
+      const backImage = new Image();
+      backImage.src = backSrc;
+
+      productImage.addEventListener("error", function () {
+        productImage.src = frontSrc;
+      });
 
       imageRow.addEventListener("mouseenter", function () {
-        productImage.src = productImage.dataset.backSrc;
+        productImage.src = backSrc;
       });
 
       imageRow.addEventListener("mouseleave", function () {
-        productImage.src = productImage.dataset.frontSrc;
+        productImage.src = frontSrc;
       });
 
-      nextButton.addEventListener("click", function () {
-        const isBackImage = productImage.src === productImage.dataset.backSrc;
-        productImage.src = isBackImage ? productImage.dataset.frontSrc : productImage.dataset.backSrc;
-      });
+      if (nextButton) {
+        nextButton.addEventListener("click", function () {
+          const currentSrc = new URL(productImage.src, window.location.href).href;
+          const backSrcAbsolute = new URL(backSrc, window.location.href).href;
+          const isBackImage = currentSrc === backSrcAbsolute;
+
+          productImage.src = isBackImage ? frontSrc : backSrc;
+        });
+      }
     });
   </script>
 </body>
