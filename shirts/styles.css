@@ -113,6 +113,21 @@ body {
     white-space: nowrap;
   }
 
+.shipping-notice {
+  margin: 0.45rem 0 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green);
+  color: #111;
+  font-family: var(--button-font);
+  font-size: clamp(1rem, 1.55vw, 1.55rem);
+  line-height: 1;
+  padding: 0.22em 0.35em 0.18em;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 1px 0 var(--shadow);
+  white-space: nowrap;
+}
+  
   .button-row {
     display: flex;
     flex-direction: row;
