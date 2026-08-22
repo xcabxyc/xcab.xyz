@@ -12,7 +12,7 @@
   --gray-700: #374151;
   --muted: #e5e5e5;
   --letterbox-height: 80px;
-  --serif: 'Times New Roman', Times, Georgia, serif;
+  --serif: "Typeright", "American Typewriter", "Courier New", monospace;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
