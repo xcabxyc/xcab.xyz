@@ -37,11 +37,10 @@
 
   /* ----- Build navigation ----- */
   function buildNav() {
-    var links = [{ label: 'About', filter: 'all' }];
+    var links = [{ label: 'all', filter: 'all' }];
     (DATA.categories || []).forEach(function (cat) {
-      links.push({ label: cap(cat), filter: cat });
+      links.push({ label: cat.toLowerCase(), filter: cat });
     });
-    links.push({ label: 'Contact', filter: 'all' });
 
     navEl.innerHTML = '';
     links.forEach(function (item) {
@@ -52,7 +51,7 @@
 
       var btn = document.createElement('button');
       btn.textContent = item.label;
-      var isFilter = item.label !== 'About' && item.label !== 'Contact';
+      var isFilter = item.label !== 'all';
       if (isFilter && activeFilter === item.filter) btn.classList.add('active');
       btn.addEventListener('click', function () {
         activeFilter = item.filter;
