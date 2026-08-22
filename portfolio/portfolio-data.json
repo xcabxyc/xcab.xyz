@@ -1,5 +1,5 @@
 {
-  "categories": ["design", "direction", "personal"],
+  "categories": ["design", "music", "other"],
   "items": [
     { "id": "p01", "title": "Lorem Ipsum One",   "year": 2024, "category": "design",    "image": "https://placehold.co/600x450/264653/ffffff?text=01", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", "gallery": ["https://placehold.co/600x450/2A9D8F/ffffff?text=01a", "https://placehold.co/600x450/E9C46A/000000?text=01b"] },
     { "id": "p02", "title": "Dolor Sit Amet",    "year": 2024, "category": "direction", "image": "https://placehold.co/600x450/E76F51/000000?text=02", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation." },
