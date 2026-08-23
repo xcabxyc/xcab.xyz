@@ -20,6 +20,8 @@
 /* Ensure the [hidden] attribute always wins over display rules */
 [hidden] { display: none !important; }
 
+html { zoom: 1.1; }
+
 html, body { height: 100%; }
 
 body {
