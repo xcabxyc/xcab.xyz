@@ -147,7 +147,7 @@
     title.textContent = item.title;
     var desc = document.createElement('p');
     desc.className = 'detail-desc';
-    desc.textContent = item.description || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+    desc.innerHTML = item.description || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
     info.appendChild(meta);
     info.appendChild(title);
     info.appendChild(desc);
