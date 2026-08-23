@@ -2,7 +2,7 @@
   "categories": ["design", "music", "other"],
   "items": [
     { "id": "p01", "title": "Shell Garage",   "year": 2021, "category": "music",    "image": "https://www.xcab.xyz/portfolio/images/shellgarage.jpg", "description": "The first album as DayEXSO, featured on two tracks and fully produced by me. Was originally meant as a joke album, and was my first shot at hip-hop production.", "gallery": ["https://placehold.co/600x450/2A9D8F/ffffff?text=01a", "https://placehold.co/600x450/E9C46A/000000?text=01b"] },
-    { "id": "p02", "title": "future forward",    "year": 2022, "category": "music", "image": "https://www.xcab.xyz/portfolio/images/02ff/ff1.jpg", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation." },
+    { "id": "p02", "title": "Dolor Sit Amet",    "year": 2024, "category": "direction", "image": "https://placehold.co/600x450/E76F51/000000?text=02", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation." },
     { "id": "p03", "title": "Consectetur",       "year": 2023, "category": "personal",  "image": "https://placehold.co/600x450/606C38/ffffff?text=03", "link": "https://example.com" },
     { "id": "p04", "title": "Adipiscing Elit",   "year": 2023, "category": "design",    "image": "https://placehold.co/600x450/283618/ffffff?text=04", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
     { "id": "p05", "title": "Sed Do Eiusmod",    "year": 2023, "category": "direction", "image": "https://placehold.co/600x450/DDA15E/000000?text=05", "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
