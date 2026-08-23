@@ -31,9 +31,15 @@ body {
   font-family: var(--serif);
 }
 
-.content { flex: 1; background: var(--white); }
+.content {
+  flex: 1;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+}
 
 .container {
+  width: 100%;
   max-width: 1400px;
   margin: 0 auto;
   padding: 24px;
